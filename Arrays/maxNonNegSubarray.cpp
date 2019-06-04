@@ -15,10 +15,10 @@ vector<int> Solution::maxset(vector<int> &A) {
             }
             end = i-1;
             
-           if( ( sumTillNow>maxTillNow ) || ( sumTillNow==maxTillNow && end - start +1 < ansLength ) ){
+           if( ( sumTillNow>maxTillNow ) || ( sumTillNow==maxTillNow && end - start +1 > ansLength ) ){
                ansStart = start;
                ansEnd = end;
-               ansLength = start + end -1 ;
+               ansLength = end-start+1 ;
                maxTillNow = sumTillNow;
             }
        }
